@@ -1,15 +1,20 @@
 /* Mobile */
-.title {
-    padding   : 2rem 2rem 1rem 2rem;
-    text-align: center
+.navigation{
+    margin-bottom: 1rem;
+}
+
+.navbar-light .navbar-toggler{
+    border-color: rgba(0,0,0,0.5);
 }
 
 .nav {
     flex-flow: column;
 }
 
-#month, #stats{
+#dispose, #month, #stats{
     height: 100vh;
+    margin: 4rem 0;
+    padding: 1rem .5rem;
 }
 
 .disposal-panel {

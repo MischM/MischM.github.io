@@ -24,40 +24,53 @@
 </head>
 
 <body>
-    <div class="title">
-        <h1>Abfall-Fall</h1>
-    </div>
-    <div role="navigation">
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <a class="nav-link" href="#dispose">Entsorgen</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#month">Monatsübersicht</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#stats">Statistik</a>
-            </li>
-        </ul>
+    <div class="navigation" role="navigation">
+        <nav class="navbar fixed-top navbar-expand-md navbar-light bg-primary">
+            <a class="navbar-brand" href="#">Abfall-Fall</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#dispose">Entsorgen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#month">Monatsübersicht</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#stats">Statistik</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <div id="dispose">
+        <div>
+            <h3>Jetzt Abfall entsorgen</h3>
+            <p>Wählen Sie das Material das Sie entsorgen möchten:</p>
+        </div>
         <div class="disposal-panel">
             <div class="dispose-rubish">
-                <button class="btn rubish-button">Abfall</button>
+                <button class="btn rubish-button" onclick="openHatch('Abfall')">Abfall</button>
             </div>
             <div class="dispose-paper">
-                <button class="btn paper-button">Papier</button>
+                <button class="btn paper-button" onclick="openHatch('Papier')">Papier</button>
 
             </div>
             <div class="dispose-glass">
-                <button class="btn glass-button">Glass</button>
+                <button class="btn glass-button" onclick="openHatch('Glass')">Glass</button>
 
             </div>
             <div class="dispose-alu">
-                <button class="btn alu-button">Aluminium</button>
+                <button class="btn alu-button" onclick="openHatch('Aluminium')">Aluminium</button>
 
             </div>
+        </div>
+        <div>
+            <p id="disposal-feedback"></p>
         </div>
     </div>
     <div id="month">
