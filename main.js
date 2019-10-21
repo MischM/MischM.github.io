@@ -13,3 +13,7 @@ function openHatch(material) {
         $("#disposal-feedback").text("");
     }, 6000);
 }
+
+function unlock() {
+    $("#login-mask").hide();
+}
