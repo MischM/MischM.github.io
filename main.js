@@ -1,5 +1,6 @@
 $(document).ready(function () {
     getAmount();
+    drawStats();
     document.cookie = "LastVisit=" + Date.now().toString();
 
     $(".nav-link").click(function () {
@@ -18,6 +19,51 @@ function openHatch(material) {
 function unlock() {
     $("#login-mask").hide();
 }
+
+function drawStats() {
+    var canvas = $("#stats-animation")[0];
+    var c = canvas.getContext("2d");
+    var startX = 0;
+    var startY = 100;
+    var endX = 100;
+    var endY = 100;
+
+    c.beginPath();
+    c.strokeStyle = "black";
+    c.lineWidth = 2;
+    c.moveTo(100, 10);
+    c.lineTo(100, 200);
+    c.moveTo(200, 10);
+    c.lineTo(200, 200);
+    c.moveTo(300, 10);
+    c.lineTo(300, 200);
+    c.stroke();
+    
+
+    drawMaterial(c, startX,startY, endX, endY, "orange");
+}
+
+function drawMaterial(canvas, startX, startY, endX, endY, color) {
+    
+    var amount = 0;
+    var x = 0;
+    setInterval(function () {
+        if (x >= endX) {
+
+        } else {
+            amount += 0.02;
+            canvas.beginPath()
+            canvas.strokeStyle = color;
+            canvas.lineWidth = 10;
+            canvas.moveTo(startX, startY);
+            canvas.lineTo(startX + (endX - startX) * amount, startY + (endY - startY) * amount);
+            canvas.stroke();
+            x = startX + (endX - startX) * amount;
+        }
+
+    }, 30);
+}
+
 function getAmount() {
     let data = {
         'jsonrpc': '2.0',

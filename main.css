@@ -32,10 +32,15 @@
     flex-flow: column;
 }
 
-#dispose, #month, #stats{
+#dispose, #month{
     height: 100vh;
     margin: 4rem 0;
     padding: 1rem .5rem;
+}
+
+#stats{
+    height: 100vh;
+    padding: 1rem 0rem;
 }
 
 .disposal-panel {
@@ -93,7 +98,10 @@
 
 .alu-button {
     background-color: lightgrey;
+}
 
+#stats-animation{
+    width: 100vw;
 }
 
 /* Desktop */
