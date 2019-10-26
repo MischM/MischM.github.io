@@ -39,8 +39,8 @@
 }
 
 #stats{
-    height: 100vh;
-    padding: 1rem 0rem;
+    height: 90vh;
+    padding-top: 1rem;
 }
 
 .disposal-panel {
@@ -102,6 +102,7 @@
 
 #stats-animation{
     width: 100vw;
+    height: 50vh;
 }
 
 /* Desktop */

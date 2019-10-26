@@ -23,10 +23,6 @@ function unlock() {
 function drawStats() {
     var canvas = $("#stats-animation")[0];
     var c = canvas.getContext("2d");
-    var startX = 0;
-    var startY = 100;
-    var endX = 100;
-    var endY = 100;
 
     c.beginPath();
     c.strokeStyle = "black";
@@ -38,20 +34,32 @@ function drawStats() {
     c.moveTo(300, 10);
     c.lineTo(300, 200);
     c.stroke();
-    
 
-    drawMaterial(c, startX,startY, endX, endY, "orange");
+    // Trash
+    drawMaterial(c, 0, 40, 215, 40, "red");
+    setTimeout(() => {
+        // Glass
+        drawMaterial(c, 0, 80, 180, 80, "yellow");
+    }, 500);
+    setTimeout(() => {
+        // Paper
+        drawMaterial(c, 0, 120, 60, 120, "lightskyblue");
+    }, 1000);
+    setTimeout(() => {
+        // Alu
+        drawMaterial(c, 0, 160, 130, 160, "lightgrey");
+    }, 1500);
 }
 
 function drawMaterial(canvas, startX, startY, endX, endY, color) {
-    
+
     var amount = 0;
     var x = 0;
     setInterval(function () {
         if (x >= endX) {
 
         } else {
-            amount += 0.02;
+            amount += 0.015;
             canvas.beginPath()
             canvas.strokeStyle = color;
             canvas.lineWidth = 10;
