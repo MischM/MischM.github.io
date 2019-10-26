@@ -39,7 +39,7 @@ function drawStats() {
     drawMaterial(c, 0, 40, 215, 40, "red");
     setTimeout(() => {
         // Glass
-        drawMaterial(c, 0, 80, 180, 80, "yellow");
+        drawMaterial(c, 0, 80, 180, 80, "darkseagreen");
     }, 500);
     setTimeout(() => {
         // Paper

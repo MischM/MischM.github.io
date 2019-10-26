@@ -1,46 +1,46 @@
 /* Mobile */
-#login-mask{
+#login-mask {
     background-color: #ff8000;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1031;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    height          : 100vh;
+    width           : 100vw;
+    overflow        : hidden;
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    z-index         : 1031;
+    text-align      : center;
+    display         : flex;
+    align-items     : center;
+    flex-direction  : column;
+    justify-content : center;
 }
 
 #key {
-    width: 50vw;
+    width : 50vw;
     cursor: pointer;
 }
 
-.navigation{
+.navigation {
     margin-bottom: 1rem;
 }
 
-.navbar-light .navbar-toggler{
-    border-color: rgba(0,0,0,0.5);
+.navbar-light .navbar-toggler {
+    border-color: rgba(0, 0, 0, 0.5);
 }
 
 .nav {
     flex-flow: column;
 }
 
-#dispose, #month{
-    height: 100vh;
-    margin: 4rem 0;
-    padding: 1rem .5rem;
+#dispose,
+#month {
+    height : 100vh;
+    padding: 4rem .5rem 1rem .5rem;
 }
 
-#stats{
-    height: 90vh;
-    padding-top: 1rem;
+#stats {
+    height : 100vh;
+    padding: 4rem .5rem 0 .5rem;
 }
 
 .disposal-panel {
@@ -87,22 +87,43 @@
     background-color: red;
 }
 
+.rubish {
+    color: red;
+}
+
 .paper-button {
     background-color: lightskyblue;
+}
 
+.paper {
+    color: lightskyblue;
 }
 
 .glass-button {
-    background-color: yellow;
+    background-color: darkseagreen;
+}
+
+.glass {
+    color: darkseagreen;
 }
 
 .alu-button {
     background-color: lightgrey;
 }
 
-#stats-animation{
-    width: 100vw;
+.alu {
+    color: lightgrey;
+}
+
+#stats-animation {
+    width : 90vw;
     height: 50vh;
+}
+
+.stats-desc {
+    display       : flex;
+    flex-direction: row;
+    place-content : space-around;
 }
 
 /* Desktop */
