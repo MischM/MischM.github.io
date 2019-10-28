@@ -32,7 +32,7 @@
     flex-flow: column;
 }
 
-#dispose{
+#dispose {
     height : 100vh;
     padding: 4rem .5rem 1rem .5rem;
 }
@@ -65,7 +65,6 @@
 .disposal-panel>div>.btn {
     height: 100%;
 }
-
 
 .dispose-rubish {
     grid-column: 1 / 2;
@@ -120,8 +119,8 @@
 }
 
 #stats-animation {
-    width : 90vw;
-    height: 50vh;
+    width           : 90vw;
+    height          : 50vh;
     background-color: #faebd7b8;
 }
 
@@ -131,14 +130,23 @@
     place-content : space-around;
 }
 
-.refresh{
+.refresh {
     text-align: right;
-    margin: 1rem 1.5rem;
+    margin    : 1rem 0;
+    max-width: 90vw;
 }
 
 /* Desktop */
 @media (min-width: 768px) {
     .nav {
         flex-flow: inherit;
+    }
+
+    .disposal-panel {
+        display              : grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows   : 1fr 1fr;
+        max-height           : 600px;
+        max-width            : 600px;
     }
 }
