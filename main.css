@@ -33,12 +33,12 @@
 }
 
 #dispose {
-    height : 100vh;
+    min-height : 100vh;
     padding: 4rem .5rem 1rem .5rem;
 }
 
 #month {
-    height : 50vh;
+    min-height : 50vh;
     padding: 4rem .5rem 1rem .5rem;
 }
 
@@ -148,5 +148,23 @@
         grid-template-rows   : 1fr 1fr;
         max-height           : 600px;
         max-width            : 600px;
+    }
+
+    #stats-animation {
+        max-width           : 600px;
+        height          : 50vh;
+    }
+
+    .refresh {
+        max-width : 600px;
+    }
+
+    .stats-desc {
+        max-width: 600px;
+    }
+
+    .main-space {
+width: 600px;
+margin: 0 auto;
     }
 }

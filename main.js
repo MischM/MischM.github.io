@@ -79,7 +79,7 @@ function getAmount() {
         'jsonrpc': '2.0',
         'method': 'generateIntegers',
         'params': {
-            'apiKey': RANDOM_API_KEY,
+            'apiKey': "e991145e-78de-4441-aa97-de182d1cb19d",
             'n': 5,
             'min': 0,
             'max': 7,

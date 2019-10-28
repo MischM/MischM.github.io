@@ -51,55 +51,57 @@
         </nav>
     </div>
 
-    <div id="dispose">
-        <div>
-            <h3>Jetzt Abfall entsorgen</h3>
-            <p>Wählen Sie das Material das Sie entsorgen möchten:</p>
-        </div>
-        <div class="disposal-panel">
-            <div class="dispose-rubish">
-                <button class="btn rubish-button" onclick="openHatch('Abfall')">Abfall</button>
+    <div class="main-space">
+        <div id="dispose">
+            <div>
+                <h3>Jetzt Abfall entsorgen</h3>
+                <p>Wählen Sie das Material das Sie entsorgen möchten:</p>
             </div>
-            <div class="dispose-paper">
-                <button class="btn paper-button" onclick="openHatch('Papier')">Papier</button>
+            <div class="disposal-panel">
+                <div class="dispose-rubish">
+                    <button class="btn rubish-button" onclick="openHatch('Abfall')">Abfall</button>
+                </div>
+                <div class="dispose-paper">
+                    <button class="btn paper-button" onclick="openHatch('Papier')">Papier</button>
 
-            </div>
-            <div class="dispose-glass">
-                <button class="btn glass-button" onclick="openHatch('Glass')">Glass</button>
+                </div>
+                <div class="dispose-glass">
+                    <button class="btn glass-button" onclick="openHatch('Glass')">Glass</button>
 
-            </div>
-            <div class="dispose-alu">
-                <button class="btn alu-button" onclick="openHatch('Aluminium')">Aluminium</button>
+                </div>
+                <div class="dispose-alu">
+                    <button class="btn alu-button" onclick="openHatch('Aluminium')">Aluminium</button>
 
+                </div>
+            </div>
+            <div>
+                <p id="disposal-feedback"></p>
             </div>
         </div>
-        <div>
-            <p id="disposal-feedback"></p>
+        <div id="month">
+            <h3>Monatsübersicht</h3>
+            <p>Entsorgte Menge Material diesen Monat.</p>
+            <div>
+                <ul>
+                    <li id="rubish-amount">Abfall: </li>
+                    <li id="paper-amount">Papier: </li>
+                    <li id="glass-amount">Glass: </li>
+                    <li id="alu-amount"> Aluminium: </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <div id="month">
-        <h3>Monatsübersicht</h3>
-        <p>Entsorgte Menge Material diesen Monat.</p>
-        <div>
-            <ul>
-                <li id="rubish-amount">Abfall: </li>
-                <li id="paper-amount">Papier: </li>
-                <li id="glass-amount">Glass: </li>
-                <li id="alu-amount"> Aluminium: </li>
-            </ul>
-        </div>
-    </div>
-    <div id="stats">
-        <h3>Jahresstatistik</h3>
-        <div class="refresh">
-            <button class="btn btn-info" onclick="drawStats()"><img src="refresh.svg" alt="reload"></button>
-        </div>
-        <canvas id="stats-animation" width="350" height="200"></canvas>
-        <div class="stats-desc">
-            <span class="rubish">Abfall</span>
-            <span class="glass">Glass</span>
-            <span class="paper">Papier</span>
-            <span class="alu">Aluminium</span>
+        <div id="stats">
+            <h3>Jahresstatistik</h3>
+            <div class="refresh">
+                <button class="btn btn-info" onclick="drawStats()"><img src="refresh.svg" alt="reload"></button>
+            </div>
+            <canvas id="stats-animation" width="350" height="200"></canvas>
+            <div class="stats-desc">
+                <span class="rubish">Abfall</span>
+                <span class="glass">Glass</span>
+                <span class="paper">Papier</span>
+                <span class="alu">Aluminium</span>
+            </div>
         </div>
     </div>
 
