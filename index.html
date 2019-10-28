@@ -22,7 +22,6 @@
         crossorigin="anonymous"></script>
     <script src="env.js"></script>
     <script src='main.js'></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jcanvas/21.0.1/min/jcanvas.min.js"></script>
 </head>
 
 <body>
@@ -81,13 +80,21 @@
     </div>
     <div id="month">
         <h3>Monatsübersicht</h3>
-        <p id="rubish-amount">Entsorgte Menge Abfall diesen Monat: </p>
-        <p id="paper-amount">Entsorgte Menge Papier diesen Monat: </p>
-        <p id="glass-amount">Entsorgte Menge Glass diesen Monat: </p>
-        <p id="alu-amount">Entsorgte Menge Alu diesen Monat: </p>
+        <p>Entsorgte Menge Material diesen Monat.</p>
+        <div>
+            <ul>
+                <li id="rubish-amount">Abfall: </li>
+                <li id="paper-amount">Papier: </li>
+                <li id="glass-amount">Glass: </li>
+                <li id="alu-amount"> Aluminium: </li>
+            </ul>
+        </div>
     </div>
     <div id="stats">
         <h3>Jahresstatistik</h3>
+            <div class="refresh">
+                <button class="btn btn-info" onclick="drawStats()"><img src="refresh.svg" alt="reload"></button>
+            </div>
         <canvas id="stats-animation" width="350" height="200"></canvas>
         <div class="stats-desc">
             <span class="rubish">Abfall</span>

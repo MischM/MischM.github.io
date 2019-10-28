@@ -22,32 +22,34 @@ function unlock() {
 
 function drawStats() {
     var canvas = $("#stats-animation")[0];
-    var c = canvas.getContext("2d");
+    var ctx = canvas.getContext("2d");
 
-    c.beginPath();
-    c.strokeStyle = "black";
-    c.lineWidth = 2;
-    c.moveTo(100, 10);
-    c.lineTo(100, 200);
-    c.moveTo(200, 10);
-    c.lineTo(200, 200);
-    c.moveTo(300, 10);
-    c.lineTo(300, 200);
-    c.stroke();
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    ctx.beginPath();
+    ctx.strokeStyle = "black";
+    ctx.lineWidth = 1;
+    ctx.moveTo(100, 10);
+    ctx.lineTo(100, 200);
+    ctx.moveTo(200, 10);
+    ctx.lineTo(200, 200);
+    ctx.moveTo(300, 10);
+    ctx.lineTo(300, 200);
+    ctx.stroke();
 
     // Trash
-    drawMaterial(c, 0, 40, 215, 40, "red");
+    drawMaterial(ctx, 0, 40, 215, 40, "red");
     setTimeout(() => {
         // Glass
-        drawMaterial(c, 0, 80, 180, 80, "darkseagreen");
+        drawMaterial(ctx, 0, 80, 180, 80, "darkseagreen");
     }, 500);
     setTimeout(() => {
         // Paper
-        drawMaterial(c, 0, 120, 60, 120, "lightskyblue");
+        drawMaterial(ctx, 0, 120, 60, 120, "lightskyblue");
     }, 1000);
     setTimeout(() => {
         // Alu
-        drawMaterial(c, 0, 160, 130, 160, "lightgrey");
+        drawMaterial(ctx, 0, 160, 130, 160, "lightgrey");
     }, 1500);
 }
 
@@ -93,10 +95,10 @@ function getAmount() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
         success: function (response) {
-            $('#rubish-amount').append(JSON.stringify(response.result.random.data[0] + "kg"));
-            $('#paper-amount').append(JSON.stringify(response.result.random.data[1] + "kg"));
-            $('#glass-amount').append(JSON.stringify(response.result.random.data[2] + "kg"));
-            $('#alu-amount').append(JSON.stringify(response.result.random.data[3] + "kg"));
+            $('#rubish-amount').append(JSON.parse(response.result.random.data[0])+ "kg");
+            $('#paper-amount').append(JSON.parse(response.result.random.data[1])+ "kg");
+            $('#glass-amount').append(JSON.parse(response.result.random.data[2])+ "kg");
+            $('#alu-amount').append(JSON.parse(response.result.random.data[3])+ "kg");
             console.log(response.result.random.data);
         }
     });

@@ -32,9 +32,13 @@
     flex-flow: column;
 }
 
-#dispose,
-#month {
+#dispose{
     height : 100vh;
+    padding: 4rem .5rem 1rem .5rem;
+}
+
+#month {
+    height : 50vh;
     padding: 4rem .5rem 1rem .5rem;
 }
 
@@ -118,12 +122,18 @@
 #stats-animation {
     width : 90vw;
     height: 50vh;
+    background-color: #faebd7b8;
 }
 
 .stats-desc {
     display       : flex;
     flex-direction: row;
     place-content : space-around;
+}
+
+.refresh{
+    text-align: right;
+    margin: 1rem 1.5rem;
 }
 
 /* Desktop */
